@@ -57,40 +57,55 @@
 			}
 			.folder {
 				cursor: pointer;
-				padding: 10px;
-				background-color: #f0f0f0;
-				border: 1px solid #ccc;
-				margin-bottom: 5px;
-				border-radius: 4px;
+				padding: 15px;
+				background-color: #007BFF;
+				color: white;
+				border: none;
+				margin-bottom: 10px;
+				border-radius: 5px;
+				text-align: center;
+				font-weight: bold;
+				transition: background-color 0.3s;
 			}
 			.folder:hover {
-				background-color: #e0e0e0;
+				background-color: #0056b3;
 			}
 			.folder-content {
 				display: none;
-				margin-left: 20px;
+				margin-top: 10px;
 				padding: 10px;
-				border-left: 2px solid #ccc;
-			}
-			.folder-content {
-				display: none;
-				padding: 10px;
-				margin-left: 0;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				background-color: #f9f9f9;
 			}
 			.folder-content .grid {
 				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-				gap: 10px;
+				grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+				gap: 15px;
 			}
 			.folder-content a {
+				display: block;
 				text-align: center;
 				text-decoration: none;
+				color: black;
+				font-size: 14px;
 			}
-			.folder-content img {
+			.folder-content a img {
 				width: 100%;
 				height: auto;
-				border: 1px solid #ccc;
-				border-radius: 4px;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+				margin-bottom: 5px;
+				transition: transform 0.2s, box-shadow 0.2s;
+			}
+			.folder-content a img:hover {
+				transform: scale(1.05);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+			.folder-content a span {
+				display: block;
+				margin-top: 5px;
+				font-weight: bold;
 			}
 		</style>
     </head>
@@ -247,11 +262,11 @@
 				<div class="grid">
 					<a href="https://www.youtube.com/watch?v=example1" target="_blank">
 						<img src="https://img.youtube.com/vi/example1/0.jpg" alt="Video 1">
-						Video 1
+						<span>Video 1</span>
 					</a>
 					<a href="https://www.youtube.com/watch?v=example2" target="_blank">
 						<img src="https://img.youtube.com/vi/example2/0.jpg" alt="Video 2">
-						Video 2
+						<span>Video 2</span>
 					</a>
 				</div>
 			</div>
@@ -261,11 +276,11 @@
 				<div class="grid">
 					<a href="https://www.youtube.com/watch?v=example3" target="_blank">
 						<img src="https://img.youtube.com/vi/example3/0.jpg" alt="Video 3">
-						Video 3
+						<span>Video 3</span>
 					</a>
 					<a href="https://www.youtube.com/watch?v=example4" target="_blank">
 						<img src="https://img.youtube.com/vi/example4/0.jpg" alt="Video 4">
-						Video 4
+						<span>Video 4</span>
 					</a>
 				</div>
 			</div>
