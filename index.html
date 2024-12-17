@@ -72,17 +72,23 @@
 				padding: 10px;
 				border-left: 2px solid #ccc;
 			}
+			.folder-content {
+				display: none;
+				padding: 10px;
+				margin-left: 0;
+			}
+			.folder-content .grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+				gap: 10px;
+			}
 			.folder-content a {
-				display: inline-block;
-				margin: 5px;
 				text-align: center;
 				text-decoration: none;
 			}
 			.folder-content img {
-				width: 100px;
-				height: 100px;
-				display: block;
-				margin: 0 auto;
+				width: 100%;
+				height: auto;
 				border: 1px solid #ccc;
 				border-radius: 4px;
 			}
@@ -238,26 +244,30 @@
 			
 			<div class="folder" onclick="toggleFolder(this)">Folder 1</div>
 			<div class="folder-content">
-				<a href="https://www.youtube.com/watch?v=example1" target="_blank">
-					<img src="https://img.youtube.com/vi/example1/0.jpg" alt="Video 1">
-					Video 1
-				</a>
-				<a href="https://www.youtube.com/watch?v=example2" target="_blank">
-					<img src="https://img.youtube.com/vi/example2/0.jpg" alt="Video 2">
-					Video 2
-				</a>
+				<div class="grid">
+					<a href="https://www.youtube.com/watch?v=example1" target="_blank">
+						<img src="https://img.youtube.com/vi/example1/0.jpg" alt="Video 1">
+						Video 1
+					</a>
+					<a href="https://www.youtube.com/watch?v=example2" target="_blank">
+						<img src="https://img.youtube.com/vi/example2/0.jpg" alt="Video 2">
+						Video 2
+					</a>
+				</div>
 			</div>
 			
 			<div class="folder" onclick="toggleFolder(this)">Folder 2</div>
 			<div class="folder-content">
-				<a href="https://www.youtube.com/watch?v=example3" target="_blank">
-					<img src="https://img.youtube.com/vi/example3/0.jpg" alt="Video 3">
-					Video 3
-				</a>
-				<a href="https://www.youtube.com/watch?v=example4" target="_blank">
-					<img src="https://img.youtube.com/vi/example4/0.jpg" alt="Video 4">
-					Video 4
-				</a>
+				<div class="grid">
+					<a href="https://www.youtube.com/watch?v=example3" target="_blank">
+						<img src="https://img.youtube.com/vi/example3/0.jpg" alt="Video 3">
+						Video 3
+					</a>
+					<a href="https://www.youtube.com/watch?v=example4" target="_blank">
+						<img src="https://img.youtube.com/vi/example4/0.jpg" alt="Video 4">
+						Video 4
+					</a>
+				</div>
 			</div>
 			
 			<script>
