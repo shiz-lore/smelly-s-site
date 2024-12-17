@@ -50,6 +50,43 @@
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 20px;
+			}
+			.folder {
+				cursor: pointer;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: 1px solid #ccc;
+				margin-bottom: 5px;
+				border-radius: 4px;
+			}
+			.folder:hover {
+				background-color: #e0e0e0;
+			}
+			.folder-content {
+				display: none;
+				margin-left: 20px;
+				padding: 10px;
+				border-left: 2px solid #ccc;
+			}
+			.folder-content a {
+				display: inline-block;
+				margin: 5px;
+				text-align: center;
+				text-decoration: none;
+			}
+			.folder-content img {
+				width: 100px;
+				height: 100px;
+				display: block;
+				margin: 0 auto;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+		</style>
     </head>
 	
 	<body>
@@ -195,7 +232,46 @@
 		</section><!--/.about-->
 		<!--about end -->
 		
-		
+		<body>
+
+			<h1>Collapsible Folders with YouTube Links</h1>
+			
+			<div class="folder" onclick="toggleFolder(this)">Folder 1</div>
+			<div class="folder-content">
+				<a href="https://www.youtube.com/watch?v=example1" target="_blank">
+					<img src="https://img.youtube.com/vi/example1/0.jpg" alt="Video 1">
+					Video 1
+				</a>
+				<a href="https://www.youtube.com/watch?v=example2" target="_blank">
+					<img src="https://img.youtube.com/vi/example2/0.jpg" alt="Video 2">
+					Video 2
+				</a>
+			</div>
+			
+			<div class="folder" onclick="toggleFolder(this)">Folder 2</div>
+			<div class="folder-content">
+				<a href="https://www.youtube.com/watch?v=example3" target="_blank">
+					<img src="https://img.youtube.com/vi/example3/0.jpg" alt="Video 3">
+					Video 3
+				</a>
+				<a href="https://www.youtube.com/watch?v=example4" target="_blank">
+					<img src="https://img.youtube.com/vi/example4/0.jpg" alt="Video 4">
+					Video 4
+				</a>
+			</div>
+			
+			<script>
+				function toggleFolder(folderElement) {
+					const content = folderElement.nextElementSibling;
+					if (content.style.display === "block") {
+						content.style.display = "none";
+					} else {
+						content.style.display = "block";
+					}
+				}
+			</script>
+			
+			</body>
 
 		<!--skills start -->
 		<section id="skills" class="skills">
