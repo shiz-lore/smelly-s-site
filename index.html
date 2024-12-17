@@ -52,31 +52,45 @@
 
 		<style>
 			body {
-				font-family: Arial, sans-serif;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 				margin: 20px;
+				background-color: #f4f4f9;
+				color: #333;
+			}
+			h1 {
+				text-align: center;
+				margin-bottom: 30px;
+				color: #007BFF;
 			}
 			.folder {
 				cursor: pointer;
-				padding: 15px;
+				display: inline-block;
+				width: 150px;
+				height: 150px;
+				margin: 10px;
 				background-color: #007BFF;
 				color: white;
-				border: none;
-				margin-bottom: 10px;
-				border-radius: 5px;
+				border-radius: 10px;
 				text-align: center;
+				vertical-align: top;
 				font-weight: bold;
-				transition: background-color 0.3s;
+				font-size: 16px;
+				line-height: 150px;
+				transition: transform 0.3s, box-shadow 0.3s;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			}
 			.folder:hover {
+				transform: scale(1.05);
+				box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 				background-color: #0056b3;
 			}
 			.folder-content {
 				display: none;
-				margin-top: 10px;
-				padding: 10px;
-				border: 1px solid #ccc;
-				border-radius: 5px;
-				background-color: #f9f9f9;
+				margin-top: 20px;
+				padding: 20px;
+				border-radius: 10px;
+				background-color: #fff;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			}
 			.folder-content .grid {
 				display: grid;
@@ -84,23 +98,26 @@
 				gap: 15px;
 			}
 			.folder-content a {
-				display: block;
 				text-align: center;
 				text-decoration: none;
-				color: black;
+				color: #333;
 				font-size: 14px;
+				transition: color 0.3s;
+			}
+			.folder-content a:hover {
+				color: #007BFF;
 			}
 			.folder-content a img {
 				width: 100%;
 				height: auto;
-				border: 1px solid #ddd;
-				border-radius: 5px;
+				border-radius: 8px;
 				margin-bottom: 5px;
-				transition: transform 0.2s, box-shadow 0.2s;
+				transition: transform 0.3s, box-shadow 0.3s;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			}
 			.folder-content a img:hover {
 				transform: scale(1.05);
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 			}
 			.folder-content a span {
 				display: block;
@@ -255,7 +272,7 @@
 		
 		<body>
 
-			<h1>Collapsible Folders with YouTube Links</h1>
+			<h1>Aesthetic Collapsible Folders</h1>
 			
 			<div class="folder" onclick="toggleFolder(this)">Folder 1</div>
 			<div class="folder-content">
