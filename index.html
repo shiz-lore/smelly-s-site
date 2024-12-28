@@ -53,14 +53,21 @@
 		<style>
 			body {
 				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-				margin: 20px;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
 				background-color: #f4f4f9;
 				color: #333;
 			}
-			h1 {
+			.container {
 				text-align: center;
+			}
+			h1 {
 				margin-bottom: 30px;
-				color: #b636ff;
+				color: #007BFF;
 			}
 			.folder {
 				cursor: pointer;
@@ -68,7 +75,7 @@
 				width: 150px;
 				height: 150px;
 				margin: 10px;
-				background-color: #b636ff;
+				background-color: #007BFF;
 				color: white;
 				border-radius: 10px;
 				text-align: center;
@@ -82,7 +89,7 @@
 			.folder:hover {
 				transform: scale(1.05);
 				box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-				background-color: #740cc4;
+				background-color: #0056b3;
 			}
 			.folder-content {
 				display: none;
@@ -105,7 +112,7 @@
 				transition: color 0.3s;
 			}
 			.folder-content a:hover {
-				color: #740cc4;
+				color: #007BFF;
 			}
 			.folder-content a img {
 				width: 100%;
@@ -272,33 +279,35 @@
 		
 		<body>
 
-			<h1>Aesthetic Collapsible Folders</h1>
+			<div class="container">
+				<h1>My Work</h1>
 			
-			<div class="folder" onclick="toggleFolder(this)">Folder 1</div>
-			<div class="folder-content">
-				<div class="grid">
-					<a href="https://www.youtube.com/watch?v=example1" target="_blank">
-						<img src="https://img.youtube.com/vi/example1/0.jpg" alt="Video 1">
-						<span>Video 1</span>
-					</a>
-					<a href="https://www.youtube.com/watch?v=example2" target="_blank">
-						<img src="https://img.youtube.com/vi/example2/0.jpg" alt="Video 2">
-						<span>Video 2</span>
-					</a>
+				<div class="folder" onclick="toggleFolder(this)">Folder 1</div>
+				<div class="folder-content">
+					<div class="grid">
+						<a href="https://www.youtube.com/watch?v=example1" target="_blank">
+							<img src="https://img.youtube.com/vi/example1/0.jpg" alt="Video 1">
+							<span>Video 1</span>
+						</a>
+						<a href="https://www.youtube.com/watch?v=example2" target="_blank">
+							<img src="https://img.youtube.com/vi/example2/0.jpg" alt="Video 2">
+							<span>Video 2</span>
+						</a>
+					</div>
 				</div>
-			</div>
 			
-			<div class="folder" onclick="toggleFolder(this)">Folder 2</div>
-			<div class="folder-content">
-				<div class="grid">
-					<a href="https://www.youtube.com/watch?v=example3" target="_blank">
-						<img src="https://img.youtube.com/vi/example3/0.jpg" alt="Video 3">
-						<span>Video 3</span>
-					</a>
-					<a href="https://www.youtube.com/watch?v=example4" target="_blank">
-						<img src="https://img.youtube.com/vi/example4/0.jpg" alt="Video 4">
-						<span>Video 4</span>
-					</a>
+				<div class="folder" onclick="toggleFolder(this)">Folder 2</div>
+				<div class="folder-content">
+					<div class="grid">
+						<a href="https://www.youtube.com/watch?v=example3" target="_blank">
+							<img src="https://img.youtube.com/vi/example3/0.jpg" alt="Video 3">
+							<span>Video 3</span>
+						</a>
+						<a href="https://www.youtube.com/watch?v=example4" target="_blank">
+							<img src="https://img.youtube.com/vi/example4/0.jpg" alt="Video 4">
+							<span>Video 4</span>
+						</a>
+					</div>
 				</div>
 			</div>
 			
