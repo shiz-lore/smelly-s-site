@@ -55,15 +55,16 @@
 				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 				margin: 0;
 				padding: 0;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 100vh;
 				background-color: #f4f4f9;
 				color: #333;
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				min-height: 100vh;
 			}
 			.container {
 				text-align: center;
+				margin-top: 20px;
 			}
 			h1 {
 				margin-bottom: 30px;
@@ -280,7 +281,7 @@
 		<body>
 
 			<div class="container">
-				<h1>My Work</h1>
+				<h1>Aesthetic Collapsible Folders</h1>
 			
 				<div class="folder" onclick="toggleFolder(this)">Folder 1</div>
 				<div class="folder-content">
@@ -310,6 +311,19 @@
 					</div>
 				</div>
 			</div>
+			
+			<script>
+				function toggleFolder(folderElement) {
+					const content = folderElement.nextElementSibling;
+					if (content.style.display === "block") {
+						content.style.display = "none";
+					} else {
+						content.style.display = "block";
+					}
+				}
+			</script>
+			
+			</body>
 			
 			<script>
 				function toggleFolder(folderElement) {
