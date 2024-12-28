@@ -57,14 +57,15 @@
 				padding: 0;
 				background-color: #f4f4f9;
 				color: #333;
-				display: flex;
-				justify-content: center;
-				align-items: flex-start;
-				min-height: 100vh;
 			}
 			.container {
 				text-align: center;
-				margin-top: 20px;
+				margin: 0 auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
 			}
 			h1 {
 				margin-bottom: 30px;
@@ -311,19 +312,6 @@
 					</div>
 				</div>
 			</div>
-			
-			<script>
-				function toggleFolder(folderElement) {
-					const content = folderElement.nextElementSibling;
-					if (content.style.display === "block") {
-						content.style.display = "none";
-					} else {
-						content.style.display = "block";
-					}
-				}
-			</script>
-			
-			</body>
 			
 			<script>
 				function toggleFolder(folderElement) {
